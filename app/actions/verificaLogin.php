@@ -1,9 +1,7 @@
 <?php
 include_once("../config/conecta.php");
 
-if(empty($_POST['email']) || empty($_POST['senha'])){
-    header("location: ../pages/home.php?msgLogin=Preencha todos os campos!");
-}else{
+
     $login = $_POST['email'];
     $senha = $_POST['senha'];
 
@@ -43,9 +41,6 @@ if(empty($_POST['email']) || empty($_POST['senha'])){
         header("location: ../pages/home.php?msgLogin=Usuário ou senha incorretos!");
     }
 
-
-
-}
 
 
 
