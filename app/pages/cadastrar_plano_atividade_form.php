@@ -6,7 +6,7 @@
     <title>Diversomp</title>
     <link rel="stylesheet" href="../../public/css/style.css">
     <style>
-/* Estilo apenas para o main */
+
 
 main {
     padding: 20px 0;
@@ -29,11 +29,11 @@ main {
 }
 
 .activity-form {
-    width: 100%; /* Aumentado para 90% da largura da página */
-    max-width: 1000px; /* Garantia de uma largura máxima */
+    width: 100%; 
+    max-width: 1000px; 
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaçamento maior entre os elementos */
+    gap: 20px; 
 }
 
 .activity-form label {
@@ -45,9 +45,9 @@ main {
 .activity-form input[type="text"],
 .activity-form textarea,
 .activity-form select {
-    width: 100%; /* Agora ocupa toda a largura do contêiner */
-    padding: 12px; /* Padding maior para conforto */
-    font-size: 1.1rem; /* Aumentado para melhor legibilidade */
+    width: 100%; 
+    padding: 12px; 
+    font-size: 1.1rem; 
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
@@ -63,7 +63,7 @@ main {
 }
 
 .activity-form button {
-    padding: 12px 20px; /* Botão maior e mais espaçoso */
+    padding: 12px 20px; 
     font-size: 1rem;
     font-weight: bold;
     color: #fff;

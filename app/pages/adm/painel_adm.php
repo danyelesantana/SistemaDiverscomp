@@ -32,7 +32,6 @@ $nome_usuario = $_SESSION['nome_usuario'];
             margin-bottom: 5px;
         }
 
-       
     </style> 
 </head>
 <body>
@@ -41,7 +40,7 @@ $nome_usuario = $_SESSION['nome_usuario'];
     <header>
         <div class="items-header">
             <div></div>
-            <h1>DIVERSC<img class="img-logo" src="../../public/img/logo.png" alt="">MP</h1>
+            <h1>DIVERSC<img class="img-logo" src="../../../public/img/logo.png" alt="">MP</h1>
             <p>Repositório de Atividades de Educação em Computação</p>
         </div>
 
@@ -54,7 +53,6 @@ $nome_usuario = $_SESSION['nome_usuario'];
         </nav>
     </header>
     <div class="divisor"></div>
-   
 
     <main>
         <section class="title-section">
