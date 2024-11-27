@@ -2,7 +2,7 @@
 
 require_once("conecta.php");
 
-function verificaEmail($email, $idprofessor){
+function verificaEmail($email, $idusuario){
 
     conecta();
 
@@ -15,15 +15,15 @@ function verificaEmail($email, $idprofessor){
     $stmt->bind_param("s",$email);
     $stmt->execute();
     $retorno = $stmt->get_result();
-    $professor = $retorno->fetch_object();
+    $usuario = $retorno->fetch_object();
     
     desconecta();
 
     if($retorno->num_rows == 1){
-        if($idprofessor == null){
+        if($usuario == null){
             return true;
         }
-        elseif($professor->id != $idprofessor){
+        elseif($usuario->id != $idusuario){
             return true;
         }else{
             return false;

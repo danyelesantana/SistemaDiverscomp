@@ -13,9 +13,9 @@ $sql = "SELECT
             d.nome as nome_disciplina,
             c.nome as cat_diversidade, 
             p.publico_alvo as publico 
-        FROM plano_atividade as p 
-        INNER JOIN disciplina as d ON p.disciplina = d.id 
-        INNER JOIN categoria_diversidade as c ON c.id = p.categoria_diversidade";
+        from plano_atividade as p 
+        inner join disciplina as d on p.disciplina = d.id 
+        inner join categoria_diversidade as c on c.id = p.categoria_diversidade";
 
 $condicoes = [];
 $parametros = [];
