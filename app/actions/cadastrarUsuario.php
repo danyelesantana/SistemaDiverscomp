@@ -50,15 +50,4 @@ if(empty($_POST['nome'])){
 
 header("Location: ../pages/home.php?msgRegister={$msg}");
 
-
-
-
-
-
-
-
-
-
-
-
 ?>
