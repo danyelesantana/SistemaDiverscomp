@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['idusuario']) || $_SESSION['tipo_usuario'] != 2 ) {
+    header("Location: home.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html> 
 <html lang="pt-br">
 <head>
@@ -5,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diversomp</title>
     <link rel="stylesheet" href="../../public/css/style.css">
-    <style>
+    <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
 
-
+<style>
 main {
     padding: 20px 0;
 }
@@ -55,6 +64,7 @@ main {
 
 .activity-form textarea {
     resize: vertical;
+    
 }
 
 .activity-form input[type="file"] {
@@ -77,8 +87,15 @@ main {
 .activity-form button:hover {
     background-color: #0056b3;
 }
+.quill-editor {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        min-height: 80px;
+        padding: 10px;
+    }
 
-    </style>
+</style>
 </head>
 <body>
 
@@ -86,7 +103,7 @@ main {
     <header>
         <div class="items-header">
             <div></div>
-            <h1>DIVERSC<img class="img-logo" src="public/img/logo.png" alt="">MP</h1>
+            <h1><img class="img-logo" src="../../public/img/logo.png"DIVERSCOMP alt="">DIVERSCOMP</h1>
             <p>Repositório de Atividades de Educação em Computação</p>
         </div>
 
@@ -111,19 +128,22 @@ main {
                 <input type="text" id="titulo" name="titulo" required>
 
                 <label for="objetivo">Objetivo:</label>
-                <textarea id="objetivo" name="objetivo" rows="4" required></textarea>
+                <textarea id="objetivo" name="objetivo" rows="10" required></textarea>
 
                 <label for="publico_alvo">Público Alvo:</label>
                 <input type="text" id="publico_alvo" name="publico_alvo" required>
 
                 <label for="metodologia">Metodologia:</label>
-                <textarea id="metodologia" name="metodologia" rows="4" required></textarea>
-
+                <textarea id="metodologia" name="metodologia" rows="10" required></textarea>
+                
                 <label for="recursos">Recursos:</label>
-                <textarea id="recursos" name="recursos" rows="4" required></textarea>
+                <textarea id="recursos" name="recursos" rows="10" required></textarea>
 
                 <label for="procedimentos">Procedimentos:</label>
-                <textarea id="procedimentos" name="procedimentos" rows="4" required></textarea>
+                <!-- Quill Editor -->
+                <div id="procedimentos-editor" class="quill-editor"></div>
+                <input type="hidden" id="procedimentos" name="procedimentos">
+
 
                 <label for="disciplina">Disciplina:</label>
                 <select id="disciplina" name="disciplina" required>
@@ -156,6 +176,8 @@ main {
     </footer>
 </div>
 
+<script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+<script src="../../public/js/script.js"></script>
 </body>
 </html>
 

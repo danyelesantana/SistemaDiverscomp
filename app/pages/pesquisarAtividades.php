@@ -15,51 +15,51 @@ include_once('../actions/listarPlanos.php')?>
     <header>
         <div class="items-header">
             <div></div>
-            <h1>DIVERSC<img class="img-logo" src="public/img/logo.png" alt="">MP</h1>
+            <h1><img class="img-logo" src="../../public/img/logo.png" alt="">DIVERSCOMP</h1>
             <p>Repositório de Atividades de Educação em Computação</p>
         </div>
 
         <nav>
             <ul>
                  <li><a href="home.php">Início</a></li>
-                <li><a href="#">Pesquisar plano</a></li>
-                
+              
             </ul>
         </nav>
     </header>
     <div class="divisor"></div>
    
-    <main>
+    <main id="container-search">
        
+     <div>
+        <form id="searchForm" action ="pesquisarAtividades.php"class="search-form" >
+            <h2>Filtros</h2>
+            
+            <div class="form-group">
+            <label for="searchDiscipline">Disciplina:</label>
+            <select id="searchDiscipline" name="disciplina" >
+                <option value="" disabled selected>Selecione uma disciplina</option>
+                <option value="3">Banco de Dados</option>
+                <option value="2">Engenharia de Software</option>
+                <option value="4">Desenvolvimento WEB</option>
+            
+                </select>
+                
+            </div>
+            <div class="form-group">
 
-<form id="searchForm" action ="pesquisar_atividades.php"class="search-form" >
-    <h2>Pesquisar Planos de Atividade</h2>
-    
-    <div class="form-group">
-    <label for="searchDiscipline">Disciplina:</label>
-    <select id="searchDiscipline" name="disciplina" >
-        <option value="" disabled selected>Selecione uma disciplina</option>
-        <option value="3">Banco de Dados</option>
-        <option value="2">Engenharia de Software</option>
-        <option value="4">Desenvolvimento WEB</option>
-    
-        </select>
-        
+                <label for="categoria_diversidade">Categoria de Diversidade:</label>
+                <select id="categoria_diversidade" name="categoria_diversidade">
+                <option value="" disabled selected>Selecione uma categoria</option>
+                <option value="1">Gênero</option>
+                <option value="2">Raça</option>
+                <option value="3">Deficiência</option>
+
+                </select>
+                
+            </div>
+            <button type="submit" id="searchButton" class="btn search-btn">Buscar</button>
+        </form>
     </div>
-    <div class="form-group">
-
-        <label for="categoria_diversidade">Categoria de Diversidade:</label>
-        <select id="categoria_diversidade" name="categoria_diversidade">
-        <option value="" disabled selected>Selecione uma categoria</option>
-        <option value="1">Gênero</option>
-        <option value="2">Raça</option>
-        <option value="3">Deficiência</option>
-
-        </select>
-        
-    </div>
-    <button type="submit" id="searchButton" class="btn search-btn">Pesquisar</button>
-</form>
 
 <div id="results" class="results">
 <?php
@@ -76,7 +76,7 @@ if (isset($lista_planos)) {
         echo "</div>";
         echo "<div class='plan-actions'>";
         echo "<a href='' class='btn download-btn'>Download</a>";
-        echo "<a href='../actions/exibirPlano.php?idplano={$plano['idplano']}' class='btn details-btn'>Ver Detalhes</a>";
+        echo "<a href='exibir_detalhes_plano.php?idplano={$plano['idplano']}' class='btn details-btn'>Ver Detalhes</a>";
         echo "</div>";
         echo "</div>";
         }

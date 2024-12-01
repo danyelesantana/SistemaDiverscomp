@@ -34,7 +34,7 @@ if(!isset($_SESSION['logado'])){
             <div class="rev-text"> 
                 Está em buscas de atividades sobre Computação e Diversidade?<br>
             </div>
-            <div class="rev-button"><a href="" >Acesse planos de atividade</a></div>
+            <div class="rev-button"><a href="pesquisarAtividades.php" >Acesse planos de atividade</a></div>
             <div class="rev-img"></div>
         </section>
 

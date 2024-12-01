@@ -13,13 +13,13 @@
     <header>
         <div class="items-header">
             <div></div>
-            <h1>DIVERSC<img class="img-logo" src="../../public/img/logo.png" alt="">MP</h1>
+            <h1><img class="img-logo" src="../../public/img/logo.png" alt="">DIVERSCOMP</h1>
             <p>Repositório de Atividades de Educação em Computação</p>
         </div>
 
         <nav>
             <ul>
-                <li><a href="pesquisar_atividades.php">Pesquisar plano</a></li>
+                <li><a href="pesquisarAtividades.php">Acessar atividades</a></li>
                 <li><a href="#" id="openRegisterModal">Cadastre-se</a></li>
                 <li><a href="#" id="openLoginModal">Entrar</a></li>
             </ul>

@@ -40,7 +40,7 @@ $nome_usuario = $_SESSION['nome_usuario'];
     <header>
         <div class="items-header">
             <div></div>
-            <h1>DIVERSC<img class="img-logo" src="../../../public/img/logo.png" alt="">MP</h1>
+            <h1><img class="img-logo" src="../../../public/img/logo.png" alt="">DIVERSCOMP</h1>
             <p>Repositório de Atividades de Educação em Computação</p>
         </div>
 

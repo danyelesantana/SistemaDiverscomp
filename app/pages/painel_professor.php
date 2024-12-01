@@ -44,7 +44,7 @@ $nome_usuario = $_SESSION['nome_usuario'];
             </div>
             <div class="products-item">
                 <div class="products-img"></div>
-                <div class="products-description"> <a href="cadastrar_plano_atividade_form.php">Cadastrar atividade</a></div>
+                <div class="products-description"> <a href="cadastrarPlano.php">Cadastrar atividade</a></div>
             </div>
             
         </section>

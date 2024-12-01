@@ -2,61 +2,72 @@
 session_start();
 require_once("../config/conecta.php");
 
-$professor = $_SESSION['idusuario'];
+if (!isset($_SESSION['idusuario'])) {
+    header("Location: ../pages/login.php");
+    exit();
+}
 
+$professor = $_SESSION['idusuario'];
 $msg = "";
+
 
 $titulo = htmlspecialchars($_POST['titulo'], ENT_QUOTES, 'UTF-8');
 $objetivo = htmlspecialchars($_POST['objetivo'], ENT_QUOTES, 'UTF-8');
 $publico_alvo = htmlspecialchars($_POST['publico_alvo'], ENT_QUOTES, 'UTF-8');
-$metodologia = htmlspecialchars($_POST['metodologia'], ENT_QUOTES, 'UTF-8');
+$metodologia =htmlspecialchars($_POST['metodologia'], ENT_QUOTES, 'UTF-8'); 
 $recursos = htmlspecialchars($_POST['recursos'], ENT_QUOTES, 'UTF-8');
-$procedimentos = htmlspecialchars($_POST['procedimentos'], ENT_QUOTES, 'UTF-8');
-$disciplina = $_POST['disciplina'];
-$cat_diversidade = $_POST['categoria_diversidade'];
+$procedimentos = $_POST['procedimentos'];
+$disciplina = intval($_POST['disciplina']);
+$categoria_diversidade = intval($_POST['categoria_diversidade']);
 $status = 0;
+
 
 if (isset($_FILES['anexo']) && $_FILES['anexo']['error'] === UPLOAD_ERR_OK) {
     $anexo = $_FILES['anexo']['name'];
     $upload_dir = '../uploads/'; 
     move_uploaded_file($_FILES['anexo']['tmp_name'], $upload_dir . $anexo);
 } else {
-    $anexo = null; 
+    $anexo = null;
 }
+
 
 conecta();
 
-$sql = "INSERT INTO plano_atividade(titulo, objetivo, publico_alvo, metodologia, recursos, procedimentos, anexo, disciplina, categoria_diversidade, professor, status)VALUES(?,?,?,?,?,?,?,?,?,?,?);";
 
-    $stmt = $mysqli->prepare($sql);
+$sql = "INSERT INTO plano_atividade (titulo, objetivo, publico_alvo, metodologia, recursos, procedimentos, anexo, disciplina, categoria_diversidade, professor, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-    if(!$stmt){
-        die("Erro ao inserir.Problema no acesso ao banco de dados");
-    }
+$stmt = $mysqli->prepare($sql);
 
-    $stmt->bind_param("sssssssiiii",$titulo,$objetivo,$publico_alvo, $metodologia, $recursos, $procedimentos, $anexo, $disciplina, $cat_diversidade, $professor, $status);
+if (!$stmt) {
+    die("Erro ao preparar a consulta: " . $mysqli->error);
+}
 
-    $stmt->execute();
+$stmt->bind_param("sssssssiiii",
+    $titulo,
+    $objetivo,
+    $publico_alvo,
+    $metodologia, 
+    $recursos,
+    $procedimentos,
+    $anexo,
+    $disciplina,
+    $categoria_diversidade,
+    $professor,
+    $status
+);
 
-    if($stmt->affected_rows > 0){
-        $msg = "Cadastro Realizado com Sucesso.";
-    }else{
-        $msg = "Não foi possível cadastrar.";
-    }
+
+$stmt->execute();
+
+if ($stmt->affected_rows > 0) {
+    $msg = "Atividade cadastrada com sucesso.";
+} else {
+    $msg = "Não foi possível cadastrar a atividade.";
+}
 
 desconecta();
 
-header("Location: ../pages/cadastrar_plano_atividade_form.php?msg={$msg}");
 
-
-
-
-
-
-
-
-
-
-
-
+header("Location: ../pages/cadastrarPlano.php?msg=" . urlencode($msg));
+exit();
 ?>

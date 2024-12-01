@@ -1,24 +1,22 @@
 
-
 *{
-   margin:0; padding: 0; 
+   margin:0; padding: 0; box-sizing: border-box; 
 }
-
 
 body{
    font-family:helvetica;
 }
 
-
 header{
-   height: 80px;
+   padding-top: 20px;
+   height: auto;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    align-items: center;
-   flex-wrap: nowrap;
+   flex-wrap: wrap;
    background-color: white;
-   color: rgb(104, 103, 103)    
+   color: rgb(104, 103, 103);
   
 }
 
@@ -54,13 +52,14 @@ h1{
 
    height: 300px;
    background-image: url(../img/banner.jpg);
-   background-size: contain;
+   background-size: cover;
    display:flex;
    justify-content: center;
    align-items: center;
    font-size: 2rem;
    color: white;
    opacity: 0.6;
+   background-repeat: no-repeat;
  
 }
 
@@ -112,9 +111,13 @@ h2{
    justify-content: center;
    align-items: center;
    border: solid 1px rgb(220, 218, 218);
-  
-
+   transition: transform 0.3s ease; 
 }
+
+.products-item:hover {
+   transform: scale(1.1);
+}
+
 
 .products-img{
    width: 100%;
@@ -255,7 +258,6 @@ footer{
    font-size: 0.7rem;
 }
 
-  /* Estilos adicionais para o modal */
   .modal {
     display: none;
     position: fixed;
@@ -349,5 +351,25 @@ footer{
    display: flex;
    font-size: 0.9em;
    margin: 5px;
+}
+
+.show-plain{
+   display: flex;
+   flex-direction: column;
+   width: 80%;
+  
+}
+
+.show-plain-items{
+   margin-bottom: 30px;
+   padding-bottom: 20px;
+   border-bottom: 1px solid grey;
+
+}
+
+.show-plain-title{
+   font-weight: bold;
+   color: #004080;
+   margin-bottom: 10px;
 }
 
