@@ -18,15 +18,15 @@ if(!isset($_SESSION['logado'])){
 
         <section id="products" class="products-card">
             <div class="products-item">
-                <div class="products-img"></div>
+                <div id="post-img-inclusao"></div>
                 <div class="products-description">Lei Brasileira de Inclusão</div>
             </div>
             <div class="products-item">
-                <div class="products-img"></div>
+                <div id="post-img-genero"></div>
                 <div class="products-description">Estereótipos de gênero</div>
             </div>
             <div class="products-item">
-                <div class="products-img"></div>
+                <div id="post-img-raca"></div>
                 <div class="products-description">Viés de raça em IA</div>
             </div>
         </section>
@@ -79,12 +79,12 @@ if(!isset($_SESSION['logado'])){
             <label for="senhaCadastro">Senha</label>
             <input type="password" id="senhaCadastro" name="senha" placeholder="Digite sua senha" required>
 
-            <label for="tipo_usuario">Tipo de Usuário</label>
+           
             <div class="section_type_user">
 
-            <div class = "section_tp_user_item"><label for="#">Professor(a)</label></label><input type="checkbox" name="tipo_usuario" value="2"></div>
+            <div class = "section_tp_user_item"><label for="#">Professor(a)</label></label><input type="radio" name="tipo_usuario" value="2"></div>
  
-           <div class="section_tp_user_item"><label for="#">Estudante</label> <input type="checkbox" name="tipo_usuario" value="3"></div>  
+           <div class="section_tp_user_item"><label for="#">Estudante</label> <input type="radio" name="tipo_usuario" value="3"></div>  
         </div>
         </div>
         <div class="modal-footer">
@@ -92,6 +92,9 @@ if(!isset($_SESSION['logado'])){
         </div>
     </form>
 </div>
+<footer>
+        <p>&copy; 2024 Diversomp. Todos os direitos reservados.</p>
+</footer>
 <script>
     const overlay = document.getElementById('overlay');
     const loginModal = document.getElementById('loginModal');

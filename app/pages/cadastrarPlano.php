@@ -27,14 +27,14 @@ main {
 }
 
 .title-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     color: #333;
 }
 
 .form-section {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 50%;
 }
 
 .activity-form {
@@ -55,11 +55,15 @@ main {
 .activity-form textarea,
 .activity-form select {
     width: 100%; 
-    padding: 12px; 
+    padding: 8px; 
     font-size: 1.1rem; 
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+}
+
+.activity-form textarea{
+    height: 80px;
 }
 
 .activity-form textarea {
@@ -91,7 +95,7 @@ main {
         border: 1px solid #ccc;
         border-radius: 5px;
         background-color: #fff;
-        min-height: 80px;
+        height: 250px;
         padding: 10px;
     }
 
@@ -151,6 +155,7 @@ main {
                     <option value="3">Banco de Dados</option>
                     <option value="2">Engenharia de Software</option>
                     <option value="4">Desenvolvimento WEB</option>
+                    <option value="6">Inteligência Artificial </option>
     
                 </select>
 

@@ -13,7 +13,7 @@
         <div class="items-header">
             <div></div>
             <h1><img class="img-logo" src="../../public/img/logo.png" alt="">DIVERSCOMP</h1>
-            <p>Repositório de Atividades de Educação em Computação</p>
+           
         </div>
 
         <nav>

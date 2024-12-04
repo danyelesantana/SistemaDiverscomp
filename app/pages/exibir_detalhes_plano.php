@@ -16,13 +16,13 @@ include_once("../actions/buscarPlano.php");
     <header>
         <div class="items-header">
             <div></div>
-            <h1><img class="img-logo" src="../../public/img/logo.png" alt="">DIVERSCOMP</h1>
-            <p>Repositório de Atividades de Educação em Computação</p>
+            <h1><a href="home.php"><img class="img-logo" src="../../public/img/logo.png" alt=""></a></li>DIVERSCOMP</h1>
+            
         </div>
 
         <nav>
             <ul>
-                 <li><a href="home.php">Início</a></li>
+                
               
             </ul>
         </nav>

@@ -41,6 +41,8 @@ if ($result->num_rows == 1) {
             $redir = "../pages/painel_professor.php";
         } elseif ($usuario->tipo_usuario == 1) {
             $redir = "../pages/adm/painel_adm.php";
+        }elseif($usuario->tipo_usuario == 3){
+            $redir = "../pages/painel_estudante.php";
         } else {
             $redir = "../pages/home.php?msgLogin=Tipo de usuário inválido.";
         }

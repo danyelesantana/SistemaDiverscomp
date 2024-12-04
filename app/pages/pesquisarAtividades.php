@@ -16,7 +16,7 @@ include_once('../actions/listarPlanos.php')?>
         <div class="items-header">
             <div></div>
             <h1><img class="img-logo" src="../../public/img/logo.png" alt="">DIVERSCOMP</h1>
-            <p>Repositório de Atividades de Educação em Computação</p>
+          
         </div>
 
         <nav>
@@ -41,6 +41,7 @@ include_once('../actions/listarPlanos.php')?>
                 <option value="3">Banco de Dados</option>
                 <option value="2">Engenharia de Software</option>
                 <option value="4">Desenvolvimento WEB</option>
+                <option value="6">Inteligência Artificial</option>
             
                 </select>
                 
@@ -68,9 +69,9 @@ if (isset($lista_planos)) {
         
         echo "<div class='teaching-plan'>";
         echo "<h3 class='plan-title'>{$plano['titulo_plano']}</h3>";
+        echo "<div class='plan-public'><strong>Público Alvo:</strong> 
+        {$plano['publico']}</div><br>";
         echo "<div class='plan-info'>";
-        echo "<div><strong>Público Alvo:</strong> 
-        {$plano['publico']}</div>";
         echo "<div><strong>Disciplina:</strong>{$plano['nome_disciplina']}</div>";
         echo "<div><strong>Categoria:</strong> {$plano['cat_diversidade']}</div>";
         echo "</div>";

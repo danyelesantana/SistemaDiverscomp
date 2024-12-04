@@ -2,6 +2,10 @@
 require_once("../config/conecta.php");
 require_once("../config/validacoes.php");
 
+define("ADMIN",1);
+define("PROFESSOR", 2);
+define("ESTUDANTE",3);
+
 $msg = "";
 
 if(empty($_POST['nome'])){
@@ -32,7 +36,7 @@ if(empty($_POST['nome'])){
     $stmt = $mysqli->prepare($sql);
 
     if(!$stmt){
-        die("Erro ao inserir.Problema no acesso ao banco de dados");
+        die("Erro ao inserir");
     }
 
     $stmt->bind_param("sssi",$nome,$email,$senhaCrip, $tipo_usuario);
