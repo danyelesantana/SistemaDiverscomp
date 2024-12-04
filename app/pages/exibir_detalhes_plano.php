@@ -86,8 +86,12 @@ include_once("../actions/buscarPlano.php");
 
        <section class="show-plain-items">
         <p class="show-plain-title">Anexos</p>
-       
-        <a href="<?php echo $planoAtividade['anexos'] ;?>">Download de Anexos</a>
+        
+        <?php if(!isset($planoAtividade['anexos'])){
+            echo "Não há anexos para essa atividade";
+        } else{ ?>
+        <a href="<?php echo '../uploads/' . $planoAtividade['anexos']; ?>" download>Download de Anexos</a>
+        <?php } ?>
        </section>
     </section>
        
@@ -95,7 +99,7 @@ include_once("../actions/buscarPlano.php");
    </main>
 
    <footer>
-       <p>&copy; 2024 Diversomp. Todos os direitos reservados.</p>
+       <p>&copy; 2024 Diverscomp. Todos os direitos reservados.</p>
    </footer>
 </div>
 

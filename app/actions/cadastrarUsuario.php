@@ -52,6 +52,6 @@ if(empty($_POST['nome'])){
     desconecta();
 }
 
-header("Location: ../pages/home.php?msgRegister={$msg}");
+header("Location: ../pages/home.php?msgCadastro={$msg}");
 
 ?>

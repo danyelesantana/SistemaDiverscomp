@@ -40,7 +40,7 @@
 
 
 .search-btn {
-    background-color: #007bff;
+    background-color:rgb(19, 70, 136);;
     color: #ffffff;
     padding: 10px 15px;
     border: none;
@@ -115,7 +115,7 @@
 }
 
 .details-btn {
-    background-color: #007bff;
+    background-color: rgb(19, 70, 136);;
     color: #ffffff;
 }
 
@@ -131,3 +131,4 @@
     font-style: italic;
     font-size: 0.8rem;
 }
+

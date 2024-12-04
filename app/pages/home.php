@@ -23,7 +23,7 @@ if(!isset($_SESSION['logado'])){
             </div>
             <div class="products-item">
                 <div id="post-img-genero"></div>
-                <div class="products-description">Estereótipos de gênero</div>
+                <div class="products-description">Equidade gênero</div>
             </div>
             <div class="products-item">
                 <div id="post-img-raca"></div>
@@ -32,7 +32,7 @@ if(!isset($_SESSION['logado'])){
         </section>
         <section id="rep" class="rev-card">
             <div class="rev-text"> 
-                Está em buscas de atividades sobre Computação e Diversidade?<br>
+                Está em busca de atividades sobre Computação e Diversidade?<br>
             </div>
             <div class="rev-button"><a href="pesquisarAtividades.php" >Acesse planos de atividade</a></div>
             <div class="rev-img"></div>
@@ -77,7 +77,7 @@ if(!isset($_SESSION['logado'])){
             <input type="email" id="emailCadastro" name="email" placeholder="Digite seu email" required>
             
             <label for="senhaCadastro">Senha</label>
-            <input type="password" id="senhaCadastro" name="senha" placeholder="Digite sua senha" required>
+            <input type="password" id="senhaCadastro" name="senha" placeholder="Digite sua senha" required minlength="6">
 
            
             <div class="section_type_user">
@@ -89,11 +89,15 @@ if(!isset($_SESSION['logado'])){
         </div>
         <div class="modal-footer">
             <button type="submit">Cadastrar</button>
+
+            <?php if (isset($_GET['msgCadastro'])) {
+                    echo htmlspecialchars($_GET['msgCadastro']);
+                } ?>
         </div>
     </form>
 </div>
 <footer>
-        <p>&copy; 2024 Diversomp. Todos os direitos reservados.</p>
+<p>&copy; 2024 Diverscomp. Todos os direitos reservados.</p>
 </footer>
 <script>
     const overlay = document.getElementById('overlay');
@@ -120,7 +124,7 @@ if(!isset($_SESSION['logado'])){
         loginModal.style.display = 'block';
         overlay.style.display = 'block';
     }
-    if (urlParams.has('registerError')) {
+    if (urlParams.has('msgCadastro')) {
         registerModal.style.display = 'block';
         overlay.style.display = 'block';
     }
@@ -137,6 +141,10 @@ if(!isset($_SESSION['logado'])){
 
        
         if (urlParams.has('msgLogin')) {
+            window.location.href = window.location.pathname; 
+        }
+
+        if (urlParams.has('msgCadastro')) {
             window.location.href = window.location.pathname; 
         }
     });

@@ -14,14 +14,17 @@ include_once('../actions/listarPlanos.php')?>
 <div class="container">
     <header>
         <div class="items-header">
-            <div></div>
-            <h1><img class="img-logo" src="../../public/img/logo.png" alt="">DIVERSCOMP</h1>
+           
+            <h1>
+                <img class="img-logo" src="../../public/img/logo.png" alt="">DIVERSCOMP
+            </h1>
+           
           
         </div>
 
         <nav>
             <ul>
-                 <li><a href="home.php">Início</a></li>
+                
               
             </ul>
         </nav>
@@ -39,7 +42,7 @@ include_once('../actions/listarPlanos.php')?>
             <select id="searchDiscipline" name="disciplina" >
                 <option value="" disabled selected>Selecione uma disciplina</option>
                 <option value="3">Banco de Dados</option>
-                <option value="2">Engenharia de Software</option>
+                <option value="1">Engenharia de Software</option>
                 <option value="4">Desenvolvimento WEB</option>
                 <option value="6">Inteligência Artificial</option>
             
@@ -88,7 +91,7 @@ if (isset($lista_planos)) {
 </div>
     </main>
     <footer>
-        <p>&copy; 2024 Diversomp. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Diverscomp. Todos os direitos reservados.</p>
     </footer>
 </div>
 </body>

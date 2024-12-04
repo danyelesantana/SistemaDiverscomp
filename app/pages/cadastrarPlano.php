@@ -108,12 +108,12 @@ main {
         <div class="items-header">
             <div></div>
             <h1><img class="img-logo" src="../../public/img/logo.png"DIVERSCOMP alt="">DIVERSCOMP</h1>
-            <p>Repositório de Atividades de Educação em Computação</p>
+           
         </div>
 
         <nav>
             <ul>
-                 <li><a href="home.php">Início</a></li>
+                 
                 <li><a href="painel_professor.php">Meu Painel</a></li>
                 <li><a href="../actions/logout.php">Sair</a></li>
             </ul>
@@ -153,7 +153,7 @@ main {
                 <select id="disciplina" name="disciplina" required>
                     <option value="" disabled selected>Selecione uma disciplina</option>
                     <option value="3">Banco de Dados</option>
-                    <option value="2">Engenharia de Software</option>
+                    <option value="1">Engenharia de Software</option>
                     <option value="4">Desenvolvimento WEB</option>
                     <option value="6">Inteligência Artificial </option>
     
@@ -177,7 +177,7 @@ main {
     </main>
 
     <footer>
-        <p>&copy; 2024 Diversomp. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Diverscomp. Todos os direitos reservados.</p>
     </footer>
 </div>
 

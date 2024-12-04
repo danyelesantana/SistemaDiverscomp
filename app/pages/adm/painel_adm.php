@@ -1,6 +1,12 @@
 <?php session_start();
+
+if (!isset($_SESSION['idusuario']) || $_SESSION['tipo_usuario'] != 1 ) {
+    header("Location: ../home.php");
+    exit();
+}
 $nome_usuario = $_SESSION['nome_usuario'];
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -41,12 +47,12 @@ $nome_usuario = $_SESSION['nome_usuario'];
         <div class="items-header">
             <div></div>
             <h1><img class="img-logo" src="../../../public/img/logo.png" alt="">DIVERSCOMP</h1>
-            <p>Repositório de Atividades de Educação em Computação</p>
+         
         </div>
 
         <nav>
             <ul>
-                <li><a href="../home.php">Início</a></li>
+              
                 <li><a href="#">Meu Painel</a></li>
                 <li><a href="../../actions/logout.php">Sair</a></li>
             </ul>
@@ -92,6 +98,7 @@ $nome_usuario = $_SESSION['nome_usuario'];
     </main>
 
     <footer>
+    <p>&copy; 2024 Diverscomp. Todos os direitos reservados.</p>
     </footer>
 </div>
 </div>

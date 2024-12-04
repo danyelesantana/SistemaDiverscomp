@@ -35,7 +35,7 @@ include_once("header_logged.php");
     </main>
 
     <footer>
-     <p>&copy; 2024 Diversomp. Todos os direitos reservados.</p>
+    <p>&copy; 2024 Diverscomp. Todos os direitos reservados.</p>
     </footer>
 </div>
 </div>

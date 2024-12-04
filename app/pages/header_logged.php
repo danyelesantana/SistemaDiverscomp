@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -18,7 +20,17 @@
 
         <nav>
             <ul>
-                <li><a href="painel_professor.php">Meu Painel</a></li>
+                <?php    
+                    if ($_SESSION['tipo_usuario'] === 2 ) { ?>
+                         <li><a href="painel_professor.php">Meu Painel</a></li>
+   
+                        <?php }else if ($_SESSION['tipo_usuario'] === 1 ) { ?>
+                        <li><a href="adm/painel_adm.php">Meu Painel</a></li>
+
+                       <?php }else{ ?>
+                        <li><a href="painel_estudante.php">Meu Painel</a></li>
+                       <?php } ?>
+               
                 <li><a href="pesquisarAtividades.php">Pesquisar Plano</a></li>
                 <li><a href="../actions/logout.php">Sair</a></li>
             </ul>
