@@ -38,7 +38,33 @@ if(!isset($_SESSION['logado'])){
             </div>
             <div class="rev-button" ><a href="pesquisarAtividades.php" >Acesse planos de atividade</a></div>
             </section>
-            <div class="rev-img"></div>
+            <section class="diverscomp">
+        <div class="coluna">
+            <h2>O que é o DiversComp?</h2>
+            <ul>
+                <li>Uma plataforma digital feita para compartilhar e acessar planos de aula que promovem diversidade, equidade e inclusão (DEI) na educação em computação.</li>
+                <li>Ajuda professores a trazer temas como gênero, raça, etnia e acessibilidade para as aulas de computação.</li>
+                <li>Cria um espaço colaborativo para troca de ideias e práticas inclusivas.</li>
+            </ul>
+        </div>
+        <div class="coluna">
+            <h2>O que você pode fazer aqui?</h2>
+            <ul>
+                <li>Cadastrar-se como professor ou estudante para acessar e compartilhar conteúdos.</li>
+                <li>Publicar planos de aula incríveis que conectam computação com temas de diversidade.</li>
+                <li>Pesquisar atividades com filtros super úteis, como disciplina e categorias de diversidade.</li>
+                <li>Baixar materiais e se inspirar com ideias de outros educadores.</li>
+            </ul>
+        </div>
+        <div class="coluna">
+            <h2>Por que usar o DiversComp?</h2>
+            <ul>
+                <li>Porque queremos que todos tenham espaço na área de tecnologia.</li>
+                <li>Porque um ensino inclusivo forma profissionais mais criativos e preparados para o futuro.</li>
+                <li>Porque aqui você encontra recursos práticos e ideias para fazer a diferença na sala de aula.</li>
+            </ul>
+        </div>
+    </section>
         
 
     
