@@ -9,6 +9,7 @@ if(!isset($_SESSION['logado'])){
 ?>
     <div class="divisor"></div>
     <div class="banner">
+      
     </div>
 
     <main>
@@ -32,11 +33,13 @@ if(!isset($_SESSION['logado'])){
         </section>
         <section id="rep" class="rev-card">
             <div class="rev-text"> 
-                Está em busca de atividades sobre Computação e Diversidade?<br>
+                <p>É docente e desenvolve atividades sobre diversidade e computação? Cadastre-se e compartilhe com a gente!</p>
+                <p>Conheça as atividades compartilhadas por outros colegas!</p>
             </div>
-            <div class="rev-button"><a href="pesquisarAtividades.php" >Acesse planos de atividade</a></div>
+            <div class="rev-button" ><a href="pesquisarAtividades.php" >Acesse planos de atividade</a></div>
+            </section>
             <div class="rev-img"></div>
-        </section>
+        
 
     
     </main>
@@ -56,7 +59,8 @@ if(!isset($_SESSION['logado'])){
             <label for="senha">Senha</label>
             <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
             <?php if (isset($_GET['msgLogin'])) {
-                    echo htmlspecialchars($_GET['msgLogin']);
+                     echo "<p class='msg'>".htmlspecialchars($_GET['msgLogin']);"</p>";
+                    
                 } ?>
         </div>
         <div class="modal-footer">
@@ -86,13 +90,14 @@ if(!isset($_SESSION['logado'])){
  
            <div class="section_tp_user_item"><label for="#">Estudante</label> <input type="radio" name="tipo_usuario" value="3"></div>  
         </div>
+        <?php if (isset($_GET['msgCadastro'])) {
+                    echo "<p class='msg'>".htmlspecialchars($_GET['msgCadastro']);"</p>";
+                } ?>
         </div>
         <div class="modal-footer">
             <button type="submit">Cadastrar</button>
 
-            <?php if (isset($_GET['msgCadastro'])) {
-                    echo htmlspecialchars($_GET['msgCadastro']);
-                } ?>
+          
         </div>
     </form>
 </div>

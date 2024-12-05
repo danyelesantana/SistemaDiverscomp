@@ -15,12 +15,12 @@ include_once("header_logged.php");
 
     <main>
         <section class="title-section">
-            <h2>Painel do(a) Usuário(a) <br><?php echo $nome_usuario?></h2>
+            <h2>Painel do(a) Estudante <br><?php echo $nome_usuario?></h2>
         </section>
 
         <section id="products" class="products-card">
             <div class="products-item">
-                <div class="products-img"></div>
+                <div class="painel-student"></div>
                 <div class="products-description"><a href="pesquisarAtividades.php">Pesquisar planos</a></div>
                 
             </div>
@@ -31,6 +31,7 @@ include_once("header_logged.php");
     </main>
 
     <footer>
+    <p>&copy; 2024 Diverscomp. Todos os direitos reservados.</p>
     </footer>
 </div>
 </div>
