@@ -264,7 +264,7 @@ footer{
 
 
 .title-section{
-   width: 100%;
+   width: 50%;
    height:70px;
    text-align: center;
    display:flex;
@@ -419,6 +419,7 @@ footer{
    color: #004080;
    margin-bottom: 10px;
 }
+
 
 footer{
    display: flex;

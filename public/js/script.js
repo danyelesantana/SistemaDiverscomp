@@ -1,7 +1,7 @@
 
  const quill = new Quill('#procedimentos-editor', {
     theme: 'snow',
-    placeholder: 'Descreva os procedimentos...',
+    placeholder: 'Descreva os procedimentos da atividade de maneira detalhada...',
     modules: {
         toolbar: [
             [{ header: [1, 2, false] }],
